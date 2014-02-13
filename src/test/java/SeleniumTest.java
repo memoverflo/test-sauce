@@ -26,7 +26,7 @@ public class SeleniumTest {
             int numFields = browserInfo.length;
             String browserName = browserInfo[0];
             String browserVersion = numFields > 1 ? browserInfo[1] : "";
-            Platform browserPlatform = numFields > 2 ? Platform.ANY : Platform.valueOf(browserInfo[2]);
+            Platform browserPlatform = numFields > 2 ? Platform.valueOf(browserInfo[2]) : Platform.ANY;
             DesiredCapabilities caps = new DesiredCapabilities(browserName, browserVersion, browserPlatform);
 
             // if we run Sauce Connect locally, we don't have a Travis job number set
