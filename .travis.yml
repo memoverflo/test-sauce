@@ -10,6 +10,9 @@ env:
     - SAUCE_BROWSER=chrome
 addons:
   sauce_connect: true
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install screen
 install: true
 before_script:
   - bash bin/start-container.sh
