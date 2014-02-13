@@ -17,4 +17,4 @@ install: true
 before_script:
   - bash bin/start-container.sh
 script:
-  - ./sbt test
+  - bash sbt/sbt test
